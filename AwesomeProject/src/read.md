@@ -26,3 +26,9 @@
     yarn add react-native-gesture-handler
     react-native link react-native-gesture-handler
 ```
+```
+    yarn add mobx
+    yarn add mobx-react
+    yarn add babel-plugin-transform-decorators-legacy
+    yarn add babel-preset-react-native-stage-0
+```
