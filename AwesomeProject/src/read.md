@@ -19,3 +19,10 @@
         + utils         // 组件
             + 
 -->
+`
+    react-navigation
+    react-native run-ios
+    yarn add react-navigation
+    yarn add react-native-gesture-handler
+    react-native link react-native-gesture-handler
+`

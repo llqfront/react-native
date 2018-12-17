@@ -32,10 +32,6 @@ class DetailsScreen extends React.Component {
                     title="Go to Home"
                     onPress={() => this.props.navigation.navigate('Home')}
                 />
-                <Button
-                    title="Go back"
-                    onPress={() => this.props.navigation.goBack()}
-                />
 
                 <Button
                     title="Go to Settings"
@@ -54,6 +50,10 @@ class SettingsScreen extends React.Component {
         return (
             <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                 <Text>SettingsScreen</Text>
+                <Button
+                    title="Go back"
+                    onPress={() => this.props.navigation.goBack()}
+                />
             </View>);
     }
 }
@@ -62,6 +62,10 @@ class ProfileScreen extends React.Component {
         return (
             <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                 <Text>ProfileScreen</Text>
+                <Button
+                    title="Go back"
+                    onPress={() => this.props.navigation.goBack()}
+                />
             </View>);
     }
 }
