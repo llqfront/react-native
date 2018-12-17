@@ -26,10 +26,3 @@
     yarn add react-native-gesture-handler
     react-native link react-native-gesture-handler
 ```
-```js
-{
-    function add(){
-        console.log(1)
-    }
-}
-```
