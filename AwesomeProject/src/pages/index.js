@@ -26,7 +26,7 @@ class DetailsScreen extends React.Component {
                 /> */}
                 <Button
                     title="Go to Details... again"
-                    onPress={() => this.props.navigation.push('Details')}
+                    onPress={() => this.props.navigation.navigate('Details')}
                 />
                 <Button
                     title="Go to Home"
@@ -67,10 +67,10 @@ class ProfileScreen extends React.Component {
 }
 
 const HomeStack = createStackNavigator({
-    Home: HomeScreen,
-    Details: DetailsScreen,
+    Home: HomeScreen
 });
 const SettingsStack = createStackNavigator({
+    Details: DetailsScreen,
     Settings: SettingsScreen,
     Profile: ProfileScreen,
 });
