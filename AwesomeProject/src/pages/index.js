@@ -16,6 +16,8 @@ class HomeScreen extends React.Component {
 }
 class DetailsScreen extends React.Component {
     render() {
+
+
         return (
             <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                 <Text>Details Screen</Text>
@@ -35,7 +37,10 @@ class DetailsScreen extends React.Component {
 
                 <Button
                     title="Go to Settings"
-                    onPress={() => this.props.navigation.push('Settings')}
+                    onPress={() => this.props.navigation.push('Settings', {
+                        itemId: 86,
+                        otherParam: 'anything you want here',
+                    })}
                 />
                 <Button
                     title="Go to Profile"
@@ -47,9 +52,15 @@ class DetailsScreen extends React.Component {
 }
 class SettingsScreen extends React.Component {
     render() {
+        const { navigation } = this.props;
+        const itemId = navigation.getParam('itemId', 'NO-ID');
+        const otherParam = navigation.getParam('otherParam', 'some default value');
         return (
             <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                 <Text>SettingsScreen</Text>
+
+                <Text>itemId: {JSON.stringify(itemId)}</Text>
+                <Text>otherParam: {JSON.stringify(otherParam)}</Text>
                 <Button
                     title="Go back"
                     onPress={() => this.props.navigation.goBack()}
